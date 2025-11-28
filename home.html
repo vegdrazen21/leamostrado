@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lea Clothing – Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="brand"><span class="brand-dot"></span>Lea Clothing</div>
+            <ul class="nav-links">
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Long Sleeves and Bags</h1>
+            <p>Premium quality anime merchandise — made for Consumers Wants.</p>
+            <a href="product.html" class="hero-btn">Shop Now</a>
+        </div>
+
+        <img src="https://i.imgur.com/7wYH2HC.png" class="hero-img">
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="products-section">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="productList"></div>
+    </section>
+
+    <!-- ADD TO CART FUNCTION -->
+    <script>
+        function addToCart(id, name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({
+                id: id,
+                name: name,
+                price: price,
+                image: image
+            });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Added to cart!");
+        }
+    </script>
+
+    <!-- LOAD PRODUCTS -->
+    <script src="home.js"></script>
+
+    <!-- TAWK.TO CHAT WIDGET -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69297936b154901962a51475/1jb502v76';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+</body>
+
+</html>
