@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anime T-Shirt Shop</title>
+    <link rel="stylesheet" href="stylelea.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="logo">LeaClothing</div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="product.html">PRODUCT</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="checkout.html">CHECKOUT</a></li>
+            <li><a href="#" class="cart-btn">CART (0)</a></li>
+        </ul>
+    </nav>
+
+    <!-- PRODUCT SECTION -->
+    <div class="container">
+        <h1 class="title">Anime Graphic T-Shirt</h1>
+
+        <img src="https://i.imgur.com/Z8V4ZgC.png" class="product-img">
+
+        <p class="price">₱499</p>
+
+        <div class="buttons">
+            <button onclick="addToCart()" class="btn add">Add to Cart</button>
+            <button onclick="checkout()" class="btn buy">Buy Now</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
